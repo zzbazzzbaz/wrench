@@ -8,6 +8,9 @@
     </parent>
 
     <artifactId>wrench-starter-dynamic-config-center</artifactId>
+    <name>wrench-starter-dynamic-config-center</name>
+    <description>wrench dynamic config center</description>
+    <url>https://github.com/zzbazzzbaz/wrench</url>
 
     <dependencies>
         <dependency>

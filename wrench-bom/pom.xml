@@ -6,7 +6,12 @@
         <artifactId>wrench</artifactId>
         <version>1.0</version>
     </parent>
+
     <artifactId>wrench-bom</artifactId>
+    <packaging>pom</packaging>
+    <name>wrench-bom</name>
+    <description>wrench bill of materials</description>
+    <url>https://github.com/zzbazzzbaz/wrench</url>
 
     <dependencyManagement>
         <dependencies>
@@ -24,5 +29,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>

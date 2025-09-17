@@ -6,9 +6,13 @@
     <artifactId>wrench</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
+
+    <name>wrench</name>
+    <description>Wrench toolkit for Java development</description>
+    <url>https://github.com/zzbazzzbaz/wrench</url>
+
     <modules>
         <module>wrench-starter-dynamic-config-center</module>
-        <module>wrench-test</module>
         <module>wrench-starter-design-framework</module>
         <module>wrench-bom</module>
     </modules>
@@ -25,6 +29,37 @@
         <version>2.7.12</version>
         <relativePath/>
     </parent>
+
+    <licenses>
+        <license>
+            <name>Apache License</name>
+            <url>https://opensource.org/license/apache-2-0/</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>gqt</id>
+            <name>gqt</name>
+            <email>3217233537@qq.com</email>
+            <url>https://github.com/zzbazzzbaz/wrench</url>
+            <organization>wrench</organization>
+            <organizationUrl>https://github.com/zzbazzzbaz/wrench</organizationUrl>
+            <roles>
+                <role>Project Manager</role>
+                <role>Developer</role>
+            </roles>
+            <timezone>Asia/Shanghai</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/zzbazzzbaz/wrench</connection>
+        <developerConnection>scm:git:https://github.com/zzbazzzbaz/wrench</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/zzbazzzbaz/wrench</url>
+    </scm>
 
     <dependencyManagement>
         <dependencies>
@@ -93,6 +128,88 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>2.7</version>
+            </plugin>
+
+            <!--   central发布插件    -->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>58494289E9E16D82</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
+
+            <!--   source源码插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--   javadoc插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <charset>UTF-8</charset>
+                    <encoding>UTF-8</encoding>
+                    <docencoding>UTF-8</docencoding>
+                    <additionalJOption>-Xdoclint:none</additionalJOption>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                            <javadocExecutable>
+                                ${java.home}${file.separator}..${file.separator}bin${file.separator}javadoc
+                            </javadocExecutable>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--gpg加密-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <configuration>
+                    <keyname>58494289E9E16D82</keyname>
+                    <passphrase>guoqitong123456@</passphrase>
+                    <gpgArguments>
+                        <arg>--pinentry-mode</arg>
+                        <arg>loopback</arg>
+                        <arg>--batch</arg>
+                        <arg>--no-tty</arg>
+                    </gpgArguments>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
