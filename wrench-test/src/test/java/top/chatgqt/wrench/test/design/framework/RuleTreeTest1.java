@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 @RunWith(SpringRunner.class)
 @SpringBootTest()
 @Import(ThreadPoolTestConfiguration.class) // 导入这个类下面的Bean对象，线程池
-public class TreeTest1 {
+public class RuleTreeTest1 {
 
     @Resource
     private DefaultStrategyFactory defaultStrategyFactory;
