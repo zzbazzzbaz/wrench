@@ -2,7 +2,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <groupId>top.chatgqt.wrench</groupId>
     <artifactId>wrench</artifactId>
     <version>1.0</version>
@@ -11,6 +10,7 @@
         <module>wrench-starter-dynamic-config-center</module>
         <module>wrench-test</module>
         <module>wrench-starter-design-framework</module>
+        <module>wrench-bom</module>
     </modules>
 
     <properties>
