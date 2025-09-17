@@ -4,7 +4,7 @@
     <parent>
         <groupId>top.chatgqt.wrench</groupId>
         <artifactId>wrench</artifactId>
-        <version>1.0</version>
+        <version>1.1</version>
     </parent>
 
     <artifactId>wrench-bom</artifactId>
@@ -19,13 +19,13 @@
             <dependency>
                 <groupId>top.chatgqt.wrench</groupId>
                 <artifactId>wrench-starter-dynamic-config-center</artifactId>
-                <version>1.0</version>
+                <version>1.1</version>
             </dependency>
             <!-- wrench design framework 设计模式 -->
             <dependency>
                 <groupId>top.chatgqt.wrench</groupId>
                 <artifactId>wrench-starter-design-framework</artifactId>
-                <version>1.0</version>
+                <version>1.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

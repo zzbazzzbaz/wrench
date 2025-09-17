@@ -4,7 +4,7 @@
 
     <groupId>top.chatgqt.wrench</groupId>
     <artifactId>wrench</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <packaging>pom</packaging>
 
     <name>wrench</name>
@@ -15,8 +15,8 @@
         <module>wrench-starter-dynamic-config-center</module>
         <module>wrench-starter-design-framework</module>
         <module>wrench-bom</module>
-        <module>wrench-test</module>
-        <module>wrench-starter-rate-limiter</module> <!-- 需要发布的时候注释 -->
+        <module>wrench-test</module><!-- 需要发布的时候注释 -->
+        <module>wrench-starter-rate-limiter</module>
     </modules>
 
     <properties>
