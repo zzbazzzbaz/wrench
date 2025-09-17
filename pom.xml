@@ -15,6 +15,8 @@
         <module>wrench-starter-dynamic-config-center</module>
         <module>wrench-starter-design-framework</module>
         <module>wrench-bom</module>
+        <module>wrench-test</module>
+        <module>wrench-starter-rate-limiter</module> <!-- 需要发布的时候注释 -->
     </modules>
 
     <properties>
@@ -100,6 +102,7 @@
                 <version>3.26.0</version>
             </dependency>
         </dependencies>
+
     </dependencyManagement>
 
     <build>
