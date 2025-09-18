@@ -13,6 +13,7 @@ thread:
         # 当线程池中的任务队列已满，并且没有空闲线程可以执行新任务时，CallerRunsPolicy 会将任务回退到调用者线程中运行。这种策略适用于不希望丢失任务且可以接受调用者线程被阻塞的场景。
         policy: CallerRunsPolicy
 
+# 扳手工程配置
 wrench:
   config:
     system: test-system
