@@ -1,12 +1,12 @@
 package top.chatgqt.wrench.design.framework.link.model2.chain;
 
-import top.chatgqt.wrench.design.framework.link.model2.DynamicContext;
+import top.chatgqt.wrench.design.framework.link.model2.BaseDynamicContext;
 import top.chatgqt.wrench.design.framework.link.model2.handler.ILogicHandler;
 
 /**
  * 业务链路
  */
-public class BusinessLinkedList<T, D extends DynamicContext, R> extends LinkedList<ILogicHandler<T, D, R>> implements ILogicHandler<T, D, R> {
+public class BusinessLinkedList<T, D extends BaseDynamicContext, R> extends LinkedList<ILogicHandler<T, D, R>> implements ILogicHandler<T, D, R> {
 
     public BusinessLinkedList(String name) {
         super(name);

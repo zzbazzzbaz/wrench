@@ -6,12 +6,12 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 链路动态上下文
  */
-public class DynamicContext {
+public class BaseDynamicContext {
 
     private boolean proceed;
     private final Map<String, Object> dataObjects = new ConcurrentHashMap<>();
 
-    public DynamicContext() {
+    public BaseDynamicContext() {
         this.proceed = true;
     }
 

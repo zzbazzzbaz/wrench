@@ -4,7 +4,7 @@ package top.chatgqt.wrench.design.framework.link.model2;
 import top.chatgqt.wrench.design.framework.link.model2.chain.BusinessLinkedList;
 import top.chatgqt.wrench.design.framework.link.model2.handler.ILogicHandler;
 
-public class LinkArmory<T, D extends DynamicContext, R> {
+public class LinkArmory<T, D extends BaseDynamicContext, R> {
 
     private final BusinessLinkedList<T, D, R> logicLink;
 

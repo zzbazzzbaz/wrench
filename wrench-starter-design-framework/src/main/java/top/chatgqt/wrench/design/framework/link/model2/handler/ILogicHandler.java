@@ -1,10 +1,10 @@
 package top.chatgqt.wrench.design.framework.link.model2.handler;
 
-import top.chatgqt.wrench.design.framework.link.model2.DynamicContext;
+import top.chatgqt.wrench.design.framework.link.model2.BaseDynamicContext;
 /**
  * 逻辑处理器
  */
-public interface ILogicHandler<T, D extends DynamicContext, R> {
+public interface ILogicHandler<T, D extends BaseDynamicContext, R> {
 
     default R next(T requestParameter, D dynamicContext) {
         dynamicContext.setProceed(true);
